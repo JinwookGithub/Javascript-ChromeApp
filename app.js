@@ -5,6 +5,8 @@ const loginInput = document.querySelector("#login-form input");
 const loginButton = document.querySelector("#login-form button");
 
 function onLoginBtnClick() {
-    console.dir(loginInput.value); // document의 value에 입력 값 있음
+    //console.dir(loginInput.value); // document의 value에 입력 값 있음
+    const username = loginInput.value;
+    console.log(username);
 }
 loginButton.addEventListener("click", onLoginBtnClick)
