@@ -1,9 +1,4 @@
-const images = ["0.jpeg", "1.jpeg", "2.jpeg"];
+const background = document.body;
 
-const chosenImage = images[Math.floor(Math.random()*images.length)];
-
-const bgImage = document.createElement("img");
-
-bgImage.src = `img/${chosenImage}`;
-
-document.body.appendChild(bgImage);
+background.style.background = "url('https://source.unsplash.com/category/nature/1600x900') no-repeat center center fixed";
+background.style.backgroundSize = "cover";

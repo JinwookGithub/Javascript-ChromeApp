@@ -1,3 +1,72 @@
 .hidden{
     display:none;
 }
+
+.contents{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+}
+
+#greeting{
+    font-size:60px;
+    margin-top:0px;
+}
+
+#clock{
+    font-size:150px;
+    margin-bottom:20px;
+    margin-top:500px;
+}
+
+#todo-form input{
+    background:none;
+    border:none;
+    border-bottom:3px solid white;
+    outline:none;
+    font-size:30px;
+    color:white;
+    width:410px;
+}
+
+#todo-form input::placeholder{
+    color:white;
+}
+
+#quote{
+    position:absolute;
+    bottom:20px;
+    font-size:20px;
+}
+
+#weather{
+    position:absolute;
+    top:20px;
+    right:20px;
+    color:white;
+    text-align: right;
+}
+
+#todo-list li button{
+    background: none;
+    border: none;
+    color:white;
+    vertical-align: middle;
+}
+
+
+#todo-list {
+    width:380px;
+}
+
+html, body{
+    height:100%;
+    padding:0;
+    margin:0;
+}
+
+body {
+    position: relative;
+}
