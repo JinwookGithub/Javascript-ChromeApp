@@ -2,7 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list"); 
 
-const toDos = [];
+let toDos = [];
 
 const TODOS_KEY = "todos";
 
@@ -14,6 +14,9 @@ function deleteTodo(event){
     // console.dir(event.target); // target : HTML element clicked
     const li = event.target.parentElement;
     li.remove();
+    toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id)); // 매 요소 검사해서 li.id가 일치하면 false 리턴되므로 해당 요소만 제외된 array 새로 생성
+                                                                 // li.id는 string type이므로 parseInt없이는 항상 false(그냥 id는 number type)
+    savetoDos();
 }
 
 function paintToDo(newTodo){
@@ -35,7 +38,7 @@ function handleToDoSubmit(event){
     toDoInput.value=""; // 엔터칠때 사라지게 
     const newTodoObj = {
         text:newTodo,
-        id:Date.new(), // unique 한 값 부여하기 위함
+        id:Date.now(), // unique 한 값 부여하기 위함
     };
     toDos.push(newTodoObj);
     paintToDo(newTodoObj);
