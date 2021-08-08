@@ -10,9 +10,34 @@
     color:white;
 }
 
-#greeting{
+.userinput{
     font-size:60px;
     margin-top:0px;
+}
+
+.userinput > * {
+    margin:22px 0 40px;
+    height:47px;
+}
+
+#login-form input[type="text"] {
+    vertical-align: top;
+    background: none;
+    border: none;
+    border-bottom: 3px solid #fff;
+    width: 270px;
+    color: white;
+    outline:none;
+    font-size:30px;
+}
+
+#login-form input[type="text"]::placeholder {
+    color:white;
+}
+
+#greeting {
+    font-size:60px;
+    line-height: 47px;
 }
 
 #clock{

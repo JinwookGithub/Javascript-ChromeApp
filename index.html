@@ -13,14 +13,17 @@
         <span></span><br>
         <span></span>
     </div>
-    <div class="contents">
-        <form class="hidden" id="login-form">
-            <input required maxlength = "15" type="text" placeholder="What is your name?" />
-            <!-- <button>Log In</button> 아래와 동일 -->
-            <input class = "hidden" type="submit" />
-        </form>
+    <div class="contents">        
         <h2 id="clock">00:00:00</h2>
-        <h1 class="hidden" id="greeting"></h1>
+        <div class="userinput">
+            <form class="hidden" id="login-form">
+                <input required maxlength = "15" type="text" placeholder="What is your name?" />
+                <!-- <button>Log In</button> 아래와 동일 -->
+                <input class = "hidden" type="submit" />
+            </form>
+            <h1 class="hidden" id="greeting"></h1>
+        </div>
+        
         <form id="todo-form">
             <input type="text" placeholder="Write a To Do and Press Enter" required>
         </form>
