@@ -18,8 +18,9 @@ function deleteTodo(event){
 
 function paintToDo(newTodo){
     const li = document.createElement("li");
+    li.id = newTodo.id; // li에 id 할당(element간에 구분가능하도록. text가 같더라도)
     const span = document.createElement("span");
-    span.innerText = newTodo;
+    span.innerText = newTodo.text;
     const button = document.createElement("button");
     button.innerText = "❌";
     button.addEventListener("click", deleteTodo);
@@ -31,9 +32,13 @@ function paintToDo(newTodo){
 function handleToDoSubmit(event){
     event.preventDefault();
     const newTodo = toDoInput.value;
-    toDoInput.value=""; // 엔터칠때 사라지게
-    toDos.push(newTodo);
-    paintToDo(newTodo);
+    toDoInput.value=""; // 엔터칠때 사라지게 
+    const newTodoObj = {
+        text:newTodo,
+        id:Date.new(), // unique 한 값 부여하기 위함
+    };
+    toDos.push(newTodoObj);
+    paintToDo(newTodoObj);
     savetoDos();
 }
 
